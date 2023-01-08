@@ -26,6 +26,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {VideoFeed} from 'react-native-firework-sdk';
+
 declare var global: {HermesInternal: null | {}};
 
 const App = () => {
@@ -44,6 +46,7 @@ const App = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
+              <VideoFeed style={{height: 200}} source="discover" />
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.tsx</Text> to change

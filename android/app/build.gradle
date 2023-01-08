@@ -209,3 +209,5 @@ configurations.all {
         force 'androidx.core:core:1.6.0'
     }
 }
+
+apply from: 'firework.gradle'
