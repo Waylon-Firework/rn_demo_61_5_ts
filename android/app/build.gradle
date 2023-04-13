@@ -189,6 +189,12 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10"
+
+    // java.lang.VerifyError: Verifier rejected class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager: android.view.View com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager.createViewInstance(com.facebook.react.uimanager.ThemedReactContext) failed to verify: android.view.View com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager.createViewInstance(com.facebook.react.uimanager.ThemedReactContext): [0x4]  can't resolve returned type 'Reference: android.view.View' or 'Unresolved Reference: com.facebook.react.views.swiperefresh.ReactSwipeRefreshLayout' (declaration of 'com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager' appears in /data/app/~~UahL1Yo7g-c6-0qA-PJOgA==/com.rn_demo_61_5_ts-ayFfEY9oviO4_0qH4KNJKg==/base.apk)
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha03'
 }
 
 // Run this once to be able to run the application with BUCK
@@ -209,3 +215,5 @@ configurations.all {
         force 'androidx.core:core:1.6.0'
     }
 }
+
+apply from: 'firework.gradle'
